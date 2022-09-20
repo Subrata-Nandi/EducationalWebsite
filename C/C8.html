@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        font-family: "Lato", sans-serif;
+      }
+      /* Fixed sidenav, full height */
+      .sidenav {
+        height: 100%;
+        width: 17vw;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background: linear-gradient(#2196f3, #e91e63);
+        overflow-x: hidden;
+        overflow: scroll;
+        padding-top: 20px;
+      }
+      /* Style the sidenav links and the dropdown button */
+      .sidenav a,
+      .dropdown-btn {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        color: black;
+        display: block;
+        border: none;
+        background: none;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+        outline: none;
+      }
+      /* On mouse-over */
+      .sidenav a:hover,
+      .dropdown-btn:hover {
+        color: #f1f1f1;
+      }
+      /* Main content */
+      .main {
+        margin-left: 17%; /* Same as the width of the sidenav */
+        font-size: 20px; /* Increased text to enable scrolling */
+        padding: 0px 10px;
+        border-radius: 10px;
+        position: relative;
+        overflow: scroll;
+        overflow-x: hidden;
+        height: 85vh;
+      }
+      .main:hover {
+        box-shadow: 2px 5px 18px 2px #364743;
+        transition: 0.5s;
+      }
+      .main-1 {
+        margin-left: 17%; /* Same as the width of the sidenav */
+        font-size: 20px; /* Increased text to enable scrolling */
+        padding: 0px 10px;
+        border-radius: 10px;
+        /* border: 1px solid red; */
+        margin-top: 2%;
+      }
+      .main-1 a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 8px 16px;
+      }
+      .main-1 a:hover {
+        background-color: lightgray;
+        color: black;
+      }
+      .previous {
+        background-color: lightcoral;
+        color: white;
+      }
+
+      .next {
+        background-color: lightcoral;
+        color: white;
+      }
+      /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+      .dropdown-container {
+        display: none;
+        background-color: transparent;
+        padding-left: 8px;
+      }
+      /* Optional: Style the caret down icon */
+      .fa-caret-down {
+        float: right;
+        padding-right: 8px;
+      }
+
+      /* td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(odd) {
+        background-color: #dddddd;
+      } */
+      .code {
+        background: lightblue;
+        width: 50vw;
+        padding-left: 2%;
+        padding-top: 0.1%;
+        padding-bottom: 0.1%;
+      }
+
+      /* Some media queries for responsiveness */
+      @media screen and (max-height: 450px) {
+        .sidenav {
+          padding-top: 15px;
+        }
+        .sidenav a {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidenav">
+      <a href="../Home.html">Home</a>
+      <a href="../About.html">About</a>
+      <button class="dropdown-btn">
+        Courses
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <button class="dropdown-btn">
+          C (Basic)
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <ul class="dropdown-container">
+          <a href="./C1.html">C Intro</a>
+          <a href="./C2.html">First C Program</a>
+          <a href="./C3.html">Data Types in C</a>
+          <a href="./C4.html">C if-else</a>
+          <a href="./C5.html">C Switch</a>
+          <a href="./C6.html">C Loops</a>
+          <a href="./C7.html">Recursion in C</a>
+          <a href="./C8.html">Storage Class</a>
+          <a href="./C9.html">C Array</a>
+          <a href="./C10.html">C Pointers</a>
+        </ul>
+
+        <button class="dropdown-btn">
+          Python
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <ul class="dropdown-container">
+          <a href="../P/P1.html">Python Intro</a>
+          <a href="../P/P2.html">First Program</a>
+          <a href="../P/P3.html">Python Syntax</a>
+          <a href="../P/P4.html">Python Variables</a>
+          <a href="../P/P5.html">Python Data Types</a>
+          <a href="../P/P6.html">Python If-Else</a>
+          <a href="../P/P7.html">Python While Loops</a>
+          <a href="../P/P8.html">Python For Loops</a>
+          <a href="../P/P9.html">Python Arrays</a>
+          <a href="../P/P10.html">Python Iterators</a>
+          <a href="../P/P11.html">Python Math</a>
+        </ul>
+
+        <button class="dropdown-btn">
+          Java Script
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <ul class="dropdown-container">
+          <a href="../J/J1.html">JS Intro</a>
+          <a href="../J/J2.html">JS Comments</a>
+          <a href="../J/J3.html">JS Variables</a>
+          <a href="../J/J4.html">JS Operators</a>
+          <a href="../J/J5.html">JS Data Types</a>
+          <a href="../J/J6.html">JS Strings</a>
+          <a href="../J/J7.html">JS Arrays</a>
+          <a href="../J/J8.html">JS Switch</a>
+          <a href="../J/J9.html">JS For Loop</a>
+          <a href="../J/J10.html">JS While Loop</a>
+        </ul>
+
+        <button class="dropdown-btn">
+          HTML & CSS
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <ul class="dropdown-container">
+          <a href="../H/H1.html">HTML Intro</a>
+          <a href="../H/H2.html">HTML Styles</a>
+          <a href="../H/H3.html">HTML Block and Inline</a>
+          <a href="../H/H4.html">HTML Responsive</a>
+          <a href="../H/H5.html">Div</a>
+          <a href="../H/H6.html">CSS Padding</a>
+          <a href="../H/H7.html">CSS Backgrounds</a>
+          <a href="../H/H8.html">CSS Z-index</a>
+          <a href="../H/H9.html">CSS Overflow</a>
+          <a href="../H/H10.html">CSS Opacity</a>
+          <a href="../H/H11.html">CSS Animations</a>
+          <a href="../H/H12.html">CSS Buttons</a>
+        </ul>
+      </div>
+      <a href="../Contact.html">Contact Us</a>
+    </div>
+
+    <div class="main">
+      <h2><u>Storage Classes in C</u></h2>
+
+      <p>
+        Storage Classes are used to describe the features of a
+        variable/function. These features basically include the scope,
+        visibility and life-time which help us to trace the existence of a
+        particular variable during the runtime of a program.
+      </p>
+      <p>C language uses 4 storage classes, namely:</p>
+      <h2>1) <u>Auto :</u></h2>
+      <p>
+        This is the default storage class for all the variables declared inside
+        a function or a block. Hence, the keyword auto is rarely used while
+        writing programs in C language. Auto variables can be only accessed
+        within the block/function they have been declared and not outside them
+        (which defines their scope). Of course, these can be accessed within
+        nested blocks within the parent block/function in which the auto
+        variable was declared. However, they can be accessed outside their scope
+        as well using the concept of pointers given here by pointing to the very
+        exact memory location where the variables resides. They are assigned a
+        garbage value by default whenever they are declared.
+      </p>
+      <h2>2) <u>Extern :</u></h2>
+
+      <p>
+        Extern storage class simply tells us that the variable is defined
+        elsewhere and not within the same block where it is used. Basically, the
+        value is assigned to it in a different block and this can be
+        overwritten/changed in a different block as well. So an extern variable
+        is nothing but a global variable initialized with a legal value where it
+        is declared in order to be used elsewhere. It can be accessed within any
+        function/block. Also, a normal global variable can be made extern as
+        well by placing the ‘extern’ keyword before its declaration/definition
+        in any function/block. This basically signifies that we are not
+        initializing a new variable but instead we are using/accessing the
+        global variable only. The main purpose of using extern variables is that
+        they can be accessed between two different files which are part of a
+        large program.
+      </p>
+      <h2>3) <u>Static :</u></h2>
+      <p>
+        This storage class is used to declare static variables which are
+        popularly used while writing programs in C language. Static variables
+        have a property of preserving their value even after they are out of
+        their scope! Hence, static variables preserve the value of their last
+        use in their scope. So we can say that they are initialized only once
+        and exist till the termination of the program. Thus, no new memory is
+        allocated because they are not re-declared. Their scope is local to the
+        function to which they were defined. Global static variables can be
+        accessed anywhere in the program. By default, they are assigned the
+        value 0 by the compiler.
+      </p>
+      <h2>4) <u>Register :</u></h2>
+      <p>
+        This storage class declares register variables which have the same
+        functionality as that of the auto variables. The only difference is that
+        the compiler tries to store these variables in the register of the
+        microprocessor if a free register is available. This makes the use of
+        register variables to be much faster than that of the variables stored
+        in the memory during the runtime of the program. If a free register is
+        not available, these are then stored in the memory only. Usually few
+        variables which are to be accessed very frequently in a program are
+        declared with the register keyword which improves the running time of
+        the program. An important and interesting point to be noted here is that
+        we cannot obtain the address of a register variable using pointers.
+      </p>
+    </div>
+    <div class="main-1">
+      <center>
+        <a href="./C7.html" class="previous">&laquo; Previous</a>
+        <a href="./C9.html" class="next">Next &raquo;</a>
+      </center>
+    </div>
+
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

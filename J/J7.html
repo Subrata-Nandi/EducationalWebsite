@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        font-family: "Lato", sans-serif;
+      }
+      /* Fixed sidenav, full height */
+      .sidenav {
+        height: 100%;
+        width: 17vw;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background: linear-gradient(#2196f3, #e91e63);
+        overflow-x: hidden;
+        overflow: scroll;
+        padding-top: 20px;
+      }
+      /* Style the sidenav links and the dropdown button */
+      .sidenav a,
+      .dropdown-btn {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        color: black;
+        display: block;
+        border: none;
+        background: none;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+        outline: none;
+      }
+      /* On mouse-over */
+      .sidenav a:hover,
+      .dropdown-btn:hover {
+        color: #f1f1f1;
+      }
+      /* Main content */
+      .main {
+        margin-left: 17%; /* Same as the width of the sidenav */
+        font-size: 20px; /* Increased text to enable scrolling */
+        padding: 0px 10px;
+        border-radius: 10px;
+        position: relative;
+        overflow: scroll;
+        overflow-x: hidden;
+        height: 85vh;
+      }
+      .main:hover {
+        box-shadow: 2px 5px 18px 2px #364743;
+        transition: 0.5s;
+      }
+      .main-1 {
+        margin-left: 17%; /* Same as the width of the sidenav */
+        font-size: 20px; /* Increased text to enable scrolling */
+        padding: 0px 10px;
+        border-radius: 10px;
+        /* border: 1px solid red; */
+        margin-top: 2%;
+      }
+      .main-1 a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 8px 16px;
+      }
+      .main-1 a:hover {
+        background-color: lightgray;
+        color: black;
+      }
+      .previous {
+        background-color: lightcoral;
+        color: white;
+      }
+
+      .next {
+        background-color: lightcoral;
+        color: white;
+      }
+      /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+      .dropdown-container {
+        display: none;
+        background-color: transparent;
+        padding-left: 8px;
+      }
+      /* Optional: Style the caret down icon */
+      .fa-caret-down {
+        float: right;
+        padding-right: 8px;
+      }
+
+      /* td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(odd) {
+        background-color: #dddddd;
+      } */
+      .code {
+        background: lightblue;
+        width: 50vw;
+        padding-left: 2%;
+        padding-top: 0.1%;
+        padding-bottom: 0.1%;
+      }
+
+      /* Some media queries for responsiveness */
+      @media screen and (max-height: 450px) {
+        .sidenav {
+          padding-top: 15px;
+        }
+        .sidenav a {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidenav">
+      <a href="../Home.html">Home</a>
+      <a href="../About.html">About</a>
+      <button class="dropdown-btn">
+        Courses
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <button class="dropdown-btn">
+          C (Basic)
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <ul class="dropdown-container">
+          <a href="../C/C1.html">C Intro</a>
+          <a href="../C/C2.html">First C Program</a>
+          <a href="../C/C3.html">Data Types in C</a>
+          <a href="../C/C4.html">C if-else</a>
+          <a href="../C/C5.html">C Switch</a>
+          <a href="../C/C6.html">C Loops</a>
+          <a href="../C/C7.html">Recursion in C</a>
+          <a href="../C/C8.html">Storage Class</a>
+          <a href="../C/C9.html">C Array</a>
+          <a href="../C/C10.html">C Pointers</a>
+        </ul>
+
+        <button class="dropdown-btn">
+          Python
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <ul class="dropdown-container">
+          <a href="../P/P1.html">Python Intro</a>
+          <a href="../P/P2.html">First Program</a>
+          <a href="../P/P3.html">Python Syntax</a>
+          <a href="../P/P4.html">Python Variables</a>
+          <a href="../P/P5.html">Python Data Types</a>
+          <a href="../P/P6.html">Python If-Else</a>
+          <a href="../P/P7.html">Python While Loops</a>
+          <a href="../P/P8.html">Python For Loops</a>
+          <a href="../P/P9.html">Python Arrays</a>
+          <a href="../P/P10.html">Python Iterators</a>
+          <a href="../P/P11.html">Python Math</a>
+        </ul>
+
+        <button class="dropdown-btn">
+          Java Script
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <ul class="dropdown-container">
+          <a href="./J1.html">JS Intro</a>
+          <a href="./J2.html">JS Comments</a>
+          <a href="./J3.html">JS Variables</a>
+          <a href="./J4.html">JS Operators</a>
+          <a href="./J5.html">JS Data Types</a>
+          <a href="./J6.html">JS Strings</a>
+          <a href="./J7.html">JS Arrays</a>
+          <a href="./J8.html">JS Switch</a>
+          <a href="./J9.html">JS For Loop</a>
+          <a href="./J10.html">JS While Loop</a>
+        </ul>
+
+        <button class="dropdown-btn">
+          HTML & CSS
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <ul class="dropdown-container">
+          <a href="../H/H1.html">HTML Intro</a>
+          <a href="../H/H2.html">HTML Styles</a>
+          <a href="../H/H3.html">HTML Block and Inline</a>
+          <a href="../H/H4.html">HTML Responsive</a>
+          <a href="../H/H5.html">Div</a>
+          <a href="../H/H6.html">CSS Padding</a>
+          <a href="../H/H7.html">CSS Backgrounds</a>
+          <a href="../H/H8.html">CSS Z-index</a>
+          <a href="../H/H9.html">CSS Overflow</a>
+          <a href="../H/H10.html">CSS Opacity</a>
+          <a href="../H/H11.html">CSS Animations</a>
+          <a href="../H/H12.html">CSS Buttons</a>
+        </ul>
+      </div>
+      <a href="../Contact.html">Contact Us</a>
+    </div>
+
+    <div class="main">
+      <h2><u>JavaScript Arrays</u></h2>
+      <p>An array is a special variable, which can hold more than one value.</p>
+      <h2>Example</h2>
+      <div class="code">
+        <p>&lt;html&gt;</p>
+        <p>&lt;body&gt;</p>
+        <p>&lt;h2&gt;JavaScript Arrays&lt;h2&gt;</p>
+        <p>&lt;p&gt; id="demo"&lt;p&gt;</p>
+        <p>&lt;script&gt;</p>
+        <p>const cars = ["Saab", "Volvo", "BMW"];</p>
+        <p>document.getElementById("demo").innerHTML = cars;</p>
+       
+        <p>&lt;/script&gt;</p>
+        <p>&lt;/body&gt;</p>
+        <p>&lt;/html&gt;</p>
+      </div>
+      <h2>Output</h2>
+      <div class="code">
+        <p><h2>JavaScript Arrays</h2></p>
+        <p>Saab,Volvo,BMW</p>
+      </div>
+      <h2>Why Using an Array?</h2>
+      <p>If you have a list of items (a list of car names, for example), storing the cars in single variables is easy</p>
+      <p>However, what if you want to loop through the cars and find a specific one? And what if you had not 3 cars, but 300?</p>
+      <p>The solution is an array!</p>
+      <p>
+        An array can hold many values under a single name, and you can access the values by referring to an index number.
+      </p>
+      <h2>Creating an Array</h2>
+      <p>Using an array literal is the easiest way to create a JavaScript Array.</p>
+      <p>Syntax:</p>
+      <div class="code">
+        <p>const array_name = [item1, item2, ...]; </p>
+      </div>
+      <h2>Using the JavaScript Keyword new</h2>
+      <p>The following example also creates an Array, and assigns values to it.</p>
+      <h2>Example</h2>
+      <div class="code">
+        <p>cconst cars = new Array("Saab", "Volvo", "BMW");</p>
+      </div>
+      <h2>Accessing Array Elements</h2>
+      <p>You access an array element by referring to the index number.</p>
+      <div class="code">
+        <p>&lt;html&gt;</p>
+        <p>&lt;body&gt;</p>
+        <p>&lt;h2&gt;JavaScript Arrays&lt;h2&gt;</p>
+        <p>&lt;p&gt;JavaScript array elements are accessed using numeric indexes (starting from 0).&lt;p&gt;</p>
+        <p>&lt;p&gt; id="demo"&lt;p&gt;</p>
+        <p>&lt;script&gt;</p>
+        <p>const cars = ["Saab", "Volvo", "BMW"];</p>
+        <p>document.getElementById("demo").innerHTML = cars[0];</p>
+        <p>&lt;/script&gt;</p>
+        <p>&lt;/body&gt;</p>
+        <p>&lt;/html&gt;</p>
+      </div>
+      <h2>Output</h2>
+      <div class="code">
+        <p><h2>JavaScript Arrays</h2></p>
+        <p>JavaScript array elements are accessed using numeric indexes (starting from 0).</p>
+        <p>Saab</p>
+      </div>
+      <h2>Note: </h2> 
+      <p>Array indexes start with 0.</p>
+      <p>[0] is the first element. [1] is the second element.</p>
+      <h2>Access the Full Array</h2>
+      <p>With JavaScript, the full array can be accessed by referring to the array name.</p>
+      <h2>Example</h2>
+      <div class="code">
+        <p>&lt;html&gt;</p>
+        <p>&lt;body&gt;</p>
+        <p>&lt;h2&gt;JavaScript Arrays&lt;h2&gt;</p>
+        <p>&lt;p&gt;JavaScript array elements are accessed using numeric indexes (starting from 0).&lt;p&gt;</p>
+        <p>&lt;p&gt; id="demo"&lt;p&gt;</p>
+        <p>&lt;script&gt;</p>
+        <p>const cars = ["Saab", "Volvo", "BMW"];</p>
+        <p>cars[0] = "Opel";</p>
+        <p>document.getElementById("demo").innerHTML = cars;</p>
+        <p>&lt;/script&gt;</p>
+        <p>&lt;/body&gt;</p>
+        <p>&lt;/html&gt;</p>
+      </div>
+      <h2>Output</h2>
+      <div class="code">
+        <p><h2>JavaScript Arrays</h2></p>
+        <p>JavaScript array elements are accessed using numeric indexes (starting from 0).</p>
+        <p>Opel,Volvo,BMW</p>
+      </div>
+      <h2>The length Property</h2>
+      <p>The length property of an array returns the length of an array (the number of array elements).</p>
+      <h2>Example</h2>
+      <div class="code">
+        <p>&lt;html&gt;</p>
+        <p>&lt;body&gt;</p>
+        <p>&lt;h2&gt;JavaScript Arrays&lt;h2&gt;</p>
+        <p>&lt;p&gt;The length property returns the length of an array.&lt;p&gt;</p>
+        <p>&lt;p&gt; id="demo"&lt;p&gt;</p>
+        <p>&lt;script&gt;</p>
+        <p>const fruits = ["Banana", "Orange", "Apple", "Mango"];</p>
+        <p>document.getElementById("demo").innerHTML = fruits.length;</p>
+        <p>&lt;/script&gt;</p>
+        <p>&lt;/body&gt;</p>
+        <p>&lt;/html&gt;</p>
+      </div>
+      <h2>Output</h2>
+      <div class="code">
+        <p><h2>JavaScript Arrays</h2></p>
+        <p>The length property returns the length of an array.</p>
+        <p>4</p>
+      </div>
+      <p>The length property is always one more than the highest array index.</p>
+
+      <h2>Accessing the First Array Element</h2>
+      <h2>Example</h2>
+      <div class="code">
+        <p>&lt;html&gt;</p>
+        <p>&lt;body&gt;</p>
+        <p>&lt;h2&gt;JavaScript Arrays&lt;h2&gt;</p>
+        <p>&lt;p&gt;JavaScript array elements are accesses using numeric indexes (starting from 0).&lt;p&gt;</p>
+        <p>&lt;p&gt; id="demo"&lt;p&gt;</p>
+        <p>&lt;script&gt;</p>
+        <p>const fruits = ["Banana", "Orange", "Apple", "Mango"];</p>
+        <p>document.getElementById("demo").innerHTML = fruits[0];</p>
+        <p>&lt;/script&gt;</p>
+        <p>&lt;/body&gt;</p>
+        <p>&lt;/html&gt;</p>
+      </div>
+      <h2>Output</h2>
+      <div class="code">
+        <p><h2>JavaScript Arrays</h2></p>
+        <p>JavaScript array elements are accesses using numeric indexes (starting from 0).</p>
+        <p>Banana</p>
+      </div>
+
+      <h2>Accessing the Last Array Element</h2>
+      <h2>Example</h2>
+      <div class="code">
+        <p>&lt;html&gt;</p>
+        <p>&lt;body&gt;</p>
+        <p>&lt;h2&gt;JavaScript Arrays&lt;h2&gt;</p>
+        <p>&lt;p&gt;JavaScript array elements are accesses using numeric indexes (starting from 0).&lt;p&gt;</p>
+        <p>&lt;p&gt; id="demo"&lt;p&gt;</p>
+        <p>&lt;script&gt;</p>
+        <p>var fruits = ["Banana", "Orange", "Apple", "Mango"];</p>
+        <p>document.getElementById("demo").innerHTML = fruits[fruits.length-1];</p>
+        <p>&lt;/script&gt;</p>
+        <p>&lt;/body&gt;</p>
+        <p>&lt;/html&gt;</p>
+      </div>
+      <h2>Output</h2>
+      <div class="code">
+        <p><h2>JavaScript Arrays</h2></p>
+        <p>JavaScript array elements are accesses using numeric indexes (starting from 0).</p>
+        <p>Mango</p>
+      </div>
+      <h2>The Difference Between Arrays and Objects</h2>
+      <p>In JavaScript, arrays use numbered indexes.  </p>
+      <p>In JavaScript, objects use named indexes.</p>
+      <p>Arrays are a special kind of objects, with numbered indexes.</p>
+      <h2>When to Use Arrays. When to use Objects.</h2>
+      <ul>
+        <li>JavaScript does not support associative arrays.</li>
+        <li>You should use objects when you want the element names to be strings (text).</li>
+        <li>You should use arrays when you want the element names to be numbers.</li>
+      </ul>
+    </div>
+    <div class="main-1">
+      <center>
+        <a href="./J6.html" class="previous">&laquo; Previous</a>
+        <a href="./J8.html" class="next">Next &raquo;</a>
+      </center>
+    </div>
+
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

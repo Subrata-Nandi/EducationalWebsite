@@ -1,0 +1,100 @@
+body {
+  background: url(./edu2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.row .home {
+  color: black;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  /* margin-top: 1px; */
+  /* border: 1px solid red; */
+}
+
+.row .home:hover {
+  color: black;
+  /* background: linear-gradient(#a1d4fd , #ffa0c0); */
+  background: linear-gradient(#e1fffd, #daf3f2);
+  /* background: lightcyan; */
+  /* border-radius: 5% 5% 50% 50%; */
+  border-radius: 10px;
+}
+
+.content {
+  padding: 16px;
+}
+
+#navbar.sticky {
+  position: fixed;
+  top: -1%;
+  width: 100%;
+  background: linear-gradient(pink, white);
+  transition: 0.2s;
+}
+
+#navbar.sticky .home:hover {
+  background: none;
+  /* box-shadow: 5px 5px 18px 2px #888888; */
+  box-shadow: 2px 5px 18px 2px #807c7c;
+  /* color: black; */
+  border-radius: 6px;
+  /* transition: 0.5s; */
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+#navbar {
+  /* overflow: hidden; */
+  margin-top: 0.5%;
+  display: block;
+}
+a.c {
+  text-decoration: none;
+  color: black;
+}
+a.c:hover {
+  color: black;
+}
+.intro {
+  padding: 1%;
+}
+.intro h2,
+h3,
+h4 {
+  /* color: rgb(147, 219, 79); */
+  color: rgb(230, 175, 193);
+  text-shadow: 2px 2px 3px rgb(0, 0, 0);
+}
+/* .carousel-item {
+  height: auto;
+  width: 100%;
+} */
+.col-lg-6 {
+  padding: 2%;
+}
+.con_1 {
+  /* border: 1px solid black; */
+  /* background: linear-gradient(rgb(154, 190, 95),rgb(211, 179, 111)); */
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  /* backdrop-filter: blur( 4px ); */
+  /* -webkit-backdrop-filter: blur( 4px ); */
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  /* border-radius: 20px; */
+  padding: 10px;
+}
+.con_1:hover {
+  box-shadow: 2px 5px 18px 2px #040807;
+  transition: 0.5s;
+}
+.con_1 h3 {
+  /* color: black; 
+  text-shadow: 2px 2px 3px rgba(206, 253, 196, 0.925);  */
+  text-shadow: 2px 1px 3px rgba(235, 235, 217, 0.925);
+  color: rgb(5, 10, 15);
+}

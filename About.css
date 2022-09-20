@@ -1,0 +1,29 @@
+.curved {
+  position: relative;
+  background: #438a8a;
+  height: 60vh;
+  border-bottom-left-radius: 50% 31%;
+  border-bottom-right-radius: 50% 31%;
+}
+h1 {
+  text-align: center;
+  text-shadow: 2px 2px 3px #ffff;
+}
+.p1 {
+  height: 40vh;
+}
+.img1 {
+  height: 100%;
+  box-shadow: 2px 5px 18px 2px #2b2a2a;
+}
+.img2 {
+  height: 100%;
+  width: 20vw;
+  box-shadow: 2px 5px 18px 2px #636060;
+}
+p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 2%;
+}

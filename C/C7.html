@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        font-family: "Lato", sans-serif;
+      }
+      /* Fixed sidenav, full height */
+      .sidenav {
+        height: 100%;
+        width: 17vw;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background: linear-gradient(#2196f3, #e91e63);
+        overflow-x: hidden;
+        overflow: scroll;
+        padding-top: 20px;
+      }
+      /* Style the sidenav links and the dropdown button */
+      .sidenav a,
+      .dropdown-btn {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        color: black;
+        display: block;
+        border: none;
+        background: none;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+        outline: none;
+      }
+      /* On mouse-over */
+      .sidenav a:hover,
+      .dropdown-btn:hover {
+        color: #f1f1f1;
+      }
+      /* Main content */
+      .main {
+        margin-left: 17%; /* Same as the width of the sidenav */
+        font-size: 20px; /* Increased text to enable scrolling */
+        padding: 0px 10px;
+        border-radius: 10px;
+        position: relative;
+        overflow: scroll;
+        overflow-x: hidden;
+        height: 85vh;
+      }
+      .main:hover {
+        box-shadow: 2px 5px 18px 2px #364743;
+        transition: 0.5s;
+      }
+      .main-1 {
+        margin-left: 17%; /* Same as the width of the sidenav */
+        font-size: 20px; /* Increased text to enable scrolling */
+        padding: 0px 10px;
+        border-radius: 10px;
+        /* border: 1px solid red; */
+        margin-top: 2%;
+      }
+      .main-1 a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 8px 16px;
+      }
+      .main-1 a:hover {
+        background-color: lightgray;
+        color: black;
+      }
+      .previous {
+        background-color: lightcoral;
+        color: white;
+      }
+
+      .next {
+        background-color: lightcoral;
+        color: white;
+      }
+      /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+      .dropdown-container {
+        display: none;
+        background-color: transparent;
+        padding-left: 8px;
+      }
+      /* Optional: Style the caret down icon */
+      .fa-caret-down {
+        float: right;
+        padding-right: 8px;
+      }
+
+      /* td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(odd) {
+        background-color: #dddddd;
+      } */
+      .code {
+        background: lightblue;
+        width: 50vw;
+        padding-left: 2%;
+        padding-top: 0.1%;
+        padding-bottom: 0.1%;
+      }
+
+      /* Some media queries for responsiveness */
+      @media screen and (max-height: 450px) {
+        .sidenav {
+          padding-top: 15px;
+        }
+        .sidenav a {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidenav">
+      <a href="../Home.html">Home</a>
+      <a href="../About.html">About</a>
+      <button class="dropdown-btn">
+        Courses
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <button class="dropdown-btn">
+          C (Basic)
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <ul class="dropdown-container">
+          <a href="./C1.html">C Intro</a>
+          <a href="./C2.html">First C Program</a>
+          <a href="./C3.html">Data Types in C</a>
+          <a href="./C4.html">C if-else</a>
+          <a href="./C5.html">C Switch</a>
+          <a href="./C6.html">C Loops</a>
+          <a href="./C7.html">Recursion in C</a>
+          <a href="./C8.html">Storage Class</a>
+          <a href="./C9.html">C Array</a>
+          <a href="./C10.html">C Pointers</a>
+        </ul>
+
+        <button class="dropdown-btn">
+          Python
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <ul class="dropdown-container">
+          <a href="../P/P1.html">Python Intro</a>
+          <a href="../P/P2.html">First Program</a>
+          <a href="../P/P3.html">Python Syntax</a>
+          <a href="../P/P4.html">Python Variables</a>
+          <a href="../P/P5.html">Python Data Types</a>
+          <a href="../P/P6.html">Python If-Else</a>
+          <a href="../P/P7.html">Python While Loops</a>
+          <a href="../P/P8.html">Python For Loops</a>
+          <a href="../P/P9.html">Python Arrays</a>
+          <a href="../P/P10.html">Python Iterators</a>
+          <a href="../P/P11.html">Python Math</a>
+        </ul>
+
+        <button class="dropdown-btn">
+          Java Script
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <ul class="dropdown-container">
+          <a href="../J/J1.html">JS Intro</a>
+          <a href="../J/J2.html">JS Comments</a>
+          <a href="../J/J3.html">JS Variables</a>
+          <a href="../J/J4.html">JS Operators</a>
+          <a href="../J/J5.html">JS Data Types</a>
+          <a href="../J/J6.html">JS Strings</a>
+          <a href="../J/J7.html">JS Arrays</a>
+          <a href="../J/J8.html">JS Switch</a>
+          <a href="../J/J9.html">JS For Loop</a>
+          <a href="../J/J10.html">JS While Loop</a>
+        </ul>
+
+        <button class="dropdown-btn">
+          HTML & CSS
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <ul class="dropdown-container">
+          <a href="../H/H1.html">HTML Intro</a>
+          <a href="../H/H2.html">HTML Styles</a>
+          <a href="../H/H3.html">HTML Block and Inline</a>
+          <a href="../H/H4.html">HTML Responsive</a>
+          <a href="../H/H5.html">Div</a>
+          <a href="../H/H6.html">CSS Padding</a>
+          <a href="../H/H7.html">CSS Backgrounds</a>
+          <a href="../H/H8.html">CSS Z-index</a>
+          <a href="../H/H9.html">CSS Overflow</a>
+          <a href="../H/H10.html">CSS Opacity</a>
+          <a href="../H/H11.html">CSS Animations</a>
+          <a href="../H/H12.html">CSS Buttons</a>
+        </ul>
+      </div>
+      <a href="../Contact.html">Contact Us</a>
+    </div>
+
+    <div class="main">
+      <h2><u>Recursion in C</u></h2>
+
+      <p>
+        Recursion is the process which comes into existence when a function
+        calls a copy of itself to work on a smaller problem. Any function which
+        calls itself is called recursive function, and such function calls are
+        called recursive calls. Recursion involves several numbers of recursive
+        calls. However, it is important to impose a termination condition of
+        recursion. Recursion code is shorter than iterative code however it is
+        difficult to understand.
+      </p>
+      <p>
+        Recursion cannot be applied to all the problem, but it is more useful
+        for the tasks that can be defined in terms of similar subtasks. For
+        Example, recursion may be applied to sorting, searching, and traversal
+        problems.
+      </p>
+      <p>
+        Generally, iterative solutions are more efficient than recursion since
+        function call is always overhead. Any problem that can be solved
+        recursively, can also be solved iteratively. However, some problems are
+        best suited to be solved by the recursion, for example, tower of Hanoi,
+        Fibonacci series, factorial finding, etc.
+      </p>
+      <p>
+        In the following example, recursion is used to calculate the factorial
+        of a number.
+      </p>
+      <div class="code">
+        <p>#include &lt;stdio.h&gt;</p>
+        <p>int fact (int);</p>
+        <p>int main()</p>
+        <p>{</p>
+        <p>int n,f;</p>
+        <p>
+          printf("Enter the number whose factorial you want to calculate?");
+        </p>
+        <p>scanf("%d",&n);</p>
+        <p>f = fact(n);</p>
+        <p>printf("factorial = %d",f);</p>
+        <p>}</p>
+        <p>int fact(int n)</p>
+        <p>{</p>
+        <p>int fact(int n)</p>
+        <p>{</p>
+        <p>if (n==0)</p>
+        <p>{</p>
+        <p>return 0;</p>
+        <p>}</p>
+        <p>else if ( n == 1)</p>
+        <p>{</p>
+        <p>return 1;</p>
+        <p>}</p>
+        <p>else</p>
+        <p>{</p>
+        <p>return n*fact(n-1);</p>
+        <p>}</p>
+        <p>}</p>
+      </div>
+      <h2>Output</h2>
+      <div class="code">
+        <p>Enter the number whose factorial you want to calculate?5</p>
+        <p>factorial = 120</p>
+      </div>
+
+      <h2><u>Recursive Function</u></h2>
+      <p>
+        A recursive function performs the tasks by dividing it into the
+        subtasks. There is a termination condition defined in the function which
+        is satisfied by some specific subtask. After this, the recursion stops
+        and the final result is returned from the function.
+      </p>
+      <p>
+        The case at which the function doesn't recur is called the base case
+        whereas the instances where the function keeps calling itself to perform
+        a subtask, is called the recursive case.
+      </p>
+    </div>
+    <div class="main-1">
+      <center>
+        <a href="./C6.html" class="previous">&laquo; Previous</a>
+        <a href="./C8.html" class="next">Next &raquo;</a>
+      </center>
+    </div>
+
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

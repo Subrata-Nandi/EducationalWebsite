@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        font-family: "Lato", sans-serif;
+      }
+      /* Fixed sidenav, full height */
+      .sidenav {
+        height: 100%;
+        width: 17vw;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background: linear-gradient(#2196f3, #e91e63);
+        overflow-x: hidden;
+        overflow: scroll;
+        padding-top: 20px;
+      }
+      /* Style the sidenav links and the dropdown button */
+      .sidenav a,
+      .dropdown-btn {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        color: black;
+        display: block;
+        border: none;
+        background: none;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+        outline: none;
+      }
+      /* On mouse-over */
+      .sidenav a:hover,
+      .dropdown-btn:hover {
+        color: #f1f1f1;
+      }
+      /* Main content */
+      .main {
+        margin-left: 17%; /* Same as the width of the sidenav */
+        font-size: 20px; /* Increased text to enable scrolling */
+        padding: 0px 10px;
+        border-radius: 10px;
+        position: relative;
+        overflow: scroll;
+        overflow-x: hidden;
+        height: 85vh;
+      }
+      .main:hover {
+        box-shadow: 2px 5px 18px 2px #364743;
+        transition: 0.5s;
+      }
+      .main-1 {
+        margin-left: 17%; /* Same as the width of the sidenav */
+        font-size: 20px; /* Increased text to enable scrolling */
+        padding: 0px 10px;
+        border-radius: 10px;
+        /* border: 1px solid red; */
+        margin-top: 2%;
+      }
+      .main-1 a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 8px 16px;
+      }
+      .main-1 a:hover {
+        background-color: lightgray;
+        color: black;
+      }
+      .previous {
+        background-color: lightcoral;
+        color: white;
+      }
+
+      .next {
+        background-color: lightcoral;
+        color: white;
+      }
+      /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+      .dropdown-container {
+        display: none;
+        background-color: transparent;
+        padding-left: 8px;
+      }
+      /* Optional: Style the caret down icon */
+      .fa-caret-down {
+        float: right;
+        padding-right: 8px;
+      }
+
+      /* td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(odd) {
+        background-color: #dddddd;
+      } */
+      .code {
+        background: lightblue;
+        width: 50vw;
+        padding-left: 2%;
+        padding-top: 0.1%;
+        padding-bottom: 0.1%;
+      }
+
+      /* Some media queries for responsiveness */
+      @media screen and (max-height: 450px) {
+        .sidenav {
+          padding-top: 15px;
+        }
+        .sidenav a {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidenav">
+      <a href="../Home.html">Home</a>
+      <a href="../About.html">About</a>
+      <button class="dropdown-btn">
+        Courses
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <button class="dropdown-btn">
+          C (Basic)
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <ul class="dropdown-container">
+          <a href="../C/C1.html">C Intro</a>
+          <a href="../C/C2.html">First C Program</a>
+          <a href="../C/C3.html">Data Types in C</a>
+          <a href="../C/C4.html">C if-else</a>
+          <a href="../C/C5.html">C Switch</a>
+          <a href="../C/C6.html">C Loops</a>
+          <a href="../C/C7.html">Recursion in C</a>
+          <a href="../C/C8.html">Storage Class</a>
+          <a href="../C/C9.html">C Array</a>
+          <a href="../C/C10.html">C Pointers</a>
+        </ul>
+
+        <button class="dropdown-btn">
+          Python
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <ul class="dropdown-container">
+          <a href="../P/P1.html">Python Intro</a>
+          <a href="../P/P2.html">First Program</a>
+          <a href="../P/P3.html">Python Syntax</a>
+          <a href="../P/P4.html">Python Variables</a>
+          <a href="../P/P5.html">Python Data Types</a>
+          <a href="../P/P6.html">Python If-Else</a>
+          <a href="../P/P7.html">Python While Loops</a>
+          <a href="../P/P8.html">Python For Loops</a>
+          <a href="../P/P9.html">Python Arrays</a>
+          <a href="../P/P10.html">Python Iterators</a>
+          <a href="../P/P11.html">Python Math</a>
+        </ul>
+
+        <button class="dropdown-btn">
+          Java Script
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <ul class="dropdown-container">
+          <a href="./J1.html">JS Intro</a>
+          <a href="./J2.html">JS Comments</a>
+          <a href="./J3.html">JS Variables</a>
+          <a href="./J4.html">JS Operators</a>
+          <a href="./J5.html">JS Data Types</a>
+          <a href="./J6.html">JS Strings</a>
+          <a href="./J7.html">JS Arrays</a>
+          <a href="./J8.html">JS Switch</a>
+          <a href="./J9.html">JS For Loop</a>
+          <a href="./J10.html">JS While Loop</a>
+        </ul>
+
+        <button class="dropdown-btn">
+          HTML & CSS
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <ul class="dropdown-container">
+          <a href="../H/H1.html">HTML Intro</a>
+          <a href="../H/H2.html">HTML Styles</a>
+          <a href="../H/H3.html">HTML Block and Inline</a>
+          <a href="../H/H4.html">HTML Responsive</a>
+          <a href="../H/H5.html">Div</a>
+          <a href="../H/H6.html">CSS Padding</a>
+          <a href="../H/H7.html">CSS Backgrounds</a>
+          <a href="../H/H8.html">CSS Z-index</a>
+          <a href="../H/H9.html">CSS Overflow</a>
+          <a href="../H/H10.html">CSS Opacity</a>
+          <a href="../H/H11.html">CSS Animations</a>
+          <a href="../H/H12.html">CSS Buttons</a>
+        </ul>
+      </div>
+      <a href="../Contact.html">Contact Us</a>
+    </div>
+
+    <div class="main">
+      <h2><u>JavaScript Switch Statement</u></h2>
+      <p>
+        The switch statement is used to perform different actions based on
+        different conditions.
+      </p>
+      <p>
+        Switch statement is used to select one of many code blocks to be
+        executed.
+      </p>
+      <h2>Syntax</h2>
+      <div class="code">
+        <p>switch(expression) {</p>
+        <p>&emsp;case x:</p>
+        <p>&emsp;&emsp;// code block</p>
+        <p>&emsp;&emsp;break;</p>
+        <p>&emsp;case y:</p>
+        <p>&emsp;&emsp;// code block</p>
+        <p>&emsp;&emsp;break;</p>
+        <p>&emsp;default:</p>
+        <p>&emsp;&emsp;// code block</p>
+        <p>}</p>
+      </div>
+      <p>This is how it works:</p>
+      <ul>
+        <li>The switch expression is evaluated once.</li>
+        <li>
+          The value of the expression is compared with the values of each case.
+        </li>
+        <li>If there is a match, the associated block of code is executed.</li>
+        <li>If there is no match, the default code block is executed.</li>
+      </ul>
+      <h2>The break Keyword</h2>
+      <p>
+        When JavaScript reaches a break keyword, it breaks out of the switch
+        block.
+      </p>
+      <p>This will stop the execution inside the switch block.</p>
+      <p>
+        It is not necessary to break the last case in a switch block. The block
+        breaks (ends) there anyway.
+      </p>
+      <h2>The default Keyword</h2>
+      <p>
+        The default keyword specifies the code to run if there is no case match.
+      </p>
+      <h2>Switching Details</h2>
+      <p>If multiple cases matches a case value, the first case is selected.</p>
+      <p>
+        If no matching cases are found, the program continues to the default
+        label.
+      </p>
+      <p>
+        If no default label is found, the program continues to the statement(s)
+        after the switch.
+      </p>
+      <h2>Strict Comparison</h2>
+      <p>Switch cases use strict comparison (===).</p>
+      <p>The values must be of the same type to match.</p>
+      <p>
+        A strict comparison can only be true if the operands are of the same
+        type.
+      </p>
+    </div>
+    <div class="main-1">
+      <center>
+        <a href="./J7.html" class="previous">&laquo; Previous</a>
+        <a href="./J9.html" class="next">Next &raquo;</a>
+      </center>
+    </div>
+
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
